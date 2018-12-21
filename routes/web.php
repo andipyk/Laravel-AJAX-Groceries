@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return redirect('/grocery');
 });
+
+Route::view('/grocery', 'grocery');
+
+Route::post('/grocery/post', 'GroceryController@store');
